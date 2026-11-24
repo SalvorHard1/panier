@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Panier — courses &amp; repas du foyer</title>
+  <meta name="description" content="Liste de courses partagée du foyer, rangée par rayon, avec budget estimé et idées de recettes selon le frigo." />
+  <meta name="theme-color" content="#C4552D" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" id="brand-mark"></span>
+      <div>
+        <h1 id="title">Courses</h1>
+        <p class="sub" id="subtitle"></p>
+      </div>
+    </div>
+    <button class="sync-pill" id="sync-pill" type="button"></button>
+  </header>
+
+  <main id="view" tabindex="-1"></main>
+
+  <nav class="tabbar" id="tabbar" aria-label="Navigation principale">
+    <button data-tab="courses" type="button"><span data-ic="cart"></span><span>Courses</span></button>
+    <button data-tab="frigo" type="button"><span data-ic="fridge"></span><span>Frigo</span></button>
+    <button data-tab="recettes" type="button"><span data-ic="chef"></span><span>Recettes</span></button>
+    <button data-tab="reglages" type="button"><span data-ic="settings"></span><span>Réglages</span></button>
+  </nav>
+
+  <div class="sheet-backdrop" id="sheet-backdrop" hidden></div>
+  <section class="sheet" id="sheet" hidden aria-modal="true" role="dialog"></section>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
